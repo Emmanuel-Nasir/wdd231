@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Abeokuta Chamber of Commerce - Your Gateway to Business Networking. Join our community to connect, grow, and succeed.">
+    <meta name="author" content="Andrew Mogbeyiromore">
+    <meta property="og:title" content="Abeokuta Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Image/logo.png">
+    <meta property="og:url" content="index.html">
+    <title>Abeokuta Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="Images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Abeokuta Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <img src="Images/logo.png" alt="Abeokuta Chamber of Commerce" class="hero-image">
+            <div class="hero-text">
+                <h2>Your Gateway to Business Networking</h2>
+                <p>Join our community to connect, grow, and succeed.</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- Current Events Section -->
+        <section id="events">
+            <h3>Upcoming Events</h3>
+            <ul>
+                <li><strong>Business Expo 2024:</strong> March 15th, 2024</li>
+                <li><strong>Networking Night:</strong> April 10th, 2024</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section id="weather">
+            <h2>Weather Information</h2>
+            <p>Loading current weather...</p>
+        </section>
+
+        <section id="weather-forecast">
+            <h2>3-Day Weather Forecast</h2>
+            <p>Loading forecast data...</p>
+        </section>
+
+        <script src="scripts/weather.js"></script>
+
+
+        <!-- Spotlight Section -->
+        <section id="spotlight">
+            <h3>Member Spotlights</h3>
+            <div id="spotlight-cards">
+                <!-- Spotlight cards will be dynamically generated here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Abeokuta Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Andrew Mogbeyiromore, WDD231</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlight.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

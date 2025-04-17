@@ -1,0 +1,341 @@
+/* Import Normalize CSS for consistent styling across browsers */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* Basic layout styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #7cc023;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+h1, h2 {
+    margin: 0.5rem;
+}
+
+/* Button styling */
+button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* View toggle section */
+#view-toggle {
+    text-align: center;
+    margin: 1rem;
+}
+
+/* Grid and List View Styles */
+#member-list {
+    padding: 20px;
+}
+
+#member-list.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+#member-list.list {
+    display: block;
+}
+
+/* Member Card Styles */
+.member-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.member-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* List view styling */
+#member-list.list .member-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#member-list.list .member-card img {
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* Form Styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Updated Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #member-list.grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    form {
+        padding: 0.5rem;
+    }
+
+    .member-card {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .member-card img {
+        width: 100%;
+    }
+
+    #member-list.list .member-card img {
+        width: 40px;
+        height: 40px;
+    }
+}
+.spotlight-card {
+    display: flex; /* Aligns the image and text side by side */
+    align-items: center; /* Centers the image and text vertically */
+    gap: 20px; /* Adds space between the image and text */
+    border: 1px solid #ddd; /* Optional: Adds a border around the card */
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Optional: Background color for the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
+    margin-bottom: 20px; /* Adds space between cards */
+}
+
+.spotlight-card img {
+    max-width: 150px; /* Sets a fixed max width for the image */
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.spotlight-content {
+    flex: 1; /* Makes the content take up the remaining space */
+}
+
+.spotlight-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.spotlight-content p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+
+/* Sidebar Styles */
+.sidebar {
+    grid-column: 1 / 2; /* Sidebar takes the first column */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+}
+
+.sidebar-content {
+    margin-bottom: 1.5rem;
+}
+
+/* Main Content Styles */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* Sidebar on the left, main content on the right */
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lazy Load */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+img[data-src].loaded {
+    opacity: 1;
+}
+
+/* Hover Effect for Images */
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 768px) {
+    /* Mobile View for Sidebar */
+    .sidebar {
+        grid-column: 1; /* Make sidebar take up full width */
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Lazy Load Styling */
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* When the image has finished loading */
+img[data-src].loaded {
+    opacity: 1;
+}
+
+/* Navigation links inside the header */
+header nav a {
+    color: #fff; /* Set the navigation links to white */
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ffcc00; /* Add hover effect for better interaction */
+}

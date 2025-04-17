@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abeokuta Chamber of Commerce - Your Gateway to Business Networking. Join our community to connect, grow, and succeed.">
+    <meta name="author" content="Andrew Mogbeyiromore">
+    <meta property="og:title" content="Abeokuta Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Images/logo.png">
+    <meta property="og:url" content="thankyou.html">
+    <title>Thank You for Joining</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="icon" href="Images/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Abeokuta Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="thank-you-section">
+            <h2>Thank You for Joining!</h2>
+            <p>Thank you for becoming a member of the Abeokuta Chamber of Commerce. We are excited to have you as part of our business community. Below is the information you submitted:</p>
+
+            <ul>
+                <li><strong>First Name:</strong> <span id="first-name"></span></li>
+                <li><strong>Last Name:</strong> <span id="last-name"></span></li>
+                <li><strong>Email:</strong> <span id="email"></span></li>
+                <li><strong>Phone:</strong> <span id="phone"></span></li>
+                <li><strong>Business/Organization Name:</strong> <span id="organization-name"></span></li>
+                <li><strong>Timestamp:</strong> <span id="timestamp"></span></li>
+            </ul>
+
+            <p>If you have any questions, feel free to <a href="contact.html">contact us</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Abeokuta Chamber of Commerce</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <p>Developed by Andrew Mogbeyiromore</p>
+    </footer>
+
+    <script>
+
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Set the data from the URL parameters
+        document.getElementById('first-name').textContent = getQueryParameter('first_name');
+        document.getElementById('last-name').textContent = getQueryParameter('last_name');
+        document.getElementById('email').textContent = getQueryParameter('email');
+        document.getElementById('phone').textContent = getQueryParameter('phone');
+        document.getElementById('organization-name').textContent = getQueryParameter('organization');
+        document.getElementById('timestamp').textContent = getQueryParameter('timestamp');
+
+        // Dynamically display current year and last modified date
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+
+</html>

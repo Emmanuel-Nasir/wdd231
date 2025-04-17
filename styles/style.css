@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: 'Sansita', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #a7bd2f;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #248534;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #248534;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #12999e;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d471f;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #12999e;
+}
+
+/* Media Queries for Mobile View */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+        background-color: #a7bd2f;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-me img {
+        max-width: 120px;
+    }
+
+    #location img {
+        max-width: 90%;
+    }
+}
+
+/* Completed Course Styles */
+.completed {
+    background-color: #d4edda;
+    color: #155724;
+}
