@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Dynamic Web Fundamentals - Adetokunbo Olutola Osibo</title>
+  <meta name="description" content="Adetokunbo Olutola Osibo's WDD 131 - Project">
+  <meta name="keywords" content="WDD 131, Web Frontend Development, Adetokunbo Olutola Osibo">
+  <meta name="author" content="Adetokunbo Olutola Osibo">
+
+  <meta property="og:title" content="Testimony Portal - Testimonies">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="https://tolaji.github.io/wdd131/testimony-portal/testimony.html">
+  <link rel="icon" href="images/testimony-portal-logo.webp" type="image/x-icon" />
+  
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Testimony<span>Portal</span></div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="navbar" id="navbar">
+      <ul class="navbar-container">
+        <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+        <li class="navbar-item"><a href="testimony.html" class="navbar-link">Testimony</a></li>
+        <li class="navbar-item"><a href="add.html" id="add-menu" class="navbar-link">Add</a></li>
+        <li class="navbar-item"><a href="login.html" class="navbar-link">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="testimony-hero">
+    <!-- <img class="pri-hero-img"  src="images/pexels-belle-co-99483-1000445.jpg" alt="People-jumping by Belle"> -->
+    <h2>Community Testimonies</h2>
+    <img class="sec-hero-img"  src="images/pexels-jibarofoto-2774570.jpg" alt="Worshiping by Luis Quintero">
+    <p>Read powerful stories shared by people like you.</p>
+  </section>
+
+  <!-- Testimonies List -->
+  <main class="testimony-main">
+    <section class="article-section">
+      <article>
+        <div class="post-content">
+          <h2>Before You Post Your Comments</h2>  
+          
+          <h3>Comments on Testimonies</h3>
+          <ul>
+            <li>Don&#8217;t post testimonies in comments. Please <a href="https://testimonyportal.com/submit/">submit your testimony</a> as a post so that it will appear on a separate page on which users may respond.</li>
+            <li>Leave comments that are in good taste and do not offend the audience or endorse any kind of philosophy involving hate, racism, bigotry, misogyny, etc.</li>
+            <li>We prefer that you not leave email addresses or personal names or information in the body of your comments.</li>
+            <li>Don&#8217;t leave promotional links to other sites in comments.</li>
+            <li>testimonyportal.com is not intended for publishing rants or gossip or conspiracy theories. Make sure your comments edify.</li>
+            <li>Do your best to use correct English grammar and spelling. Don&#8217;t use all caps when commenting.</li>
+            <li>Please do not make factually inaccurate statements about world history, religion, science, etc. We don&#8217;t publish comments that contain information that we know to be false. If you don&#8217;t know whether it&#8217;s true, don&#8217;t state it as true.</li>
+          </ul>
+        </div>
+      </article>
+  </section>
+  <section class="testimony-list-section">
+    
+    <div class="testimony-list" id="testimonyList"></div>
+      <!-- <button id="loadMoreBtn">Load More Testimonies</button> -->
+    
+    <div class="visitor-box">
+      <aside id="visitor-message" >
+
+        <!-- Trigger Box -->
+        <!-- Modal Trigger Box -->
+        <div class="testimony-box" id="openModal">
+          <h2>GET TESTIMONIES</h2>
+          <p>Receive the newest Christian testimonies FREE!</p>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal" id="testimonyModal">
+          <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h3>Subscribe for Testimonies</h3>
+            <p>Sign up to receive the newest Christian testimonies!</p>
+            <input type="email" id="emailInput" placeholder="Enter your email" />
+            <button id="subscribeBtn">Subscribe</button>
+            <p id="feedbackMsg" style="margin-top: 10px;"></p>
+          </div>
+        </div>
+
+        <div class="discussion-box">
+          <h2>DISCUSSION</h2>
+          <ul id="discussionList">
+            <li><strong>Patience</strong> on <a href="#">Miracles that God has Done in my Life</a></li>
+            <li><strong>Sunday Akodu</strong> on <a href="#">Miracles that God has Done in my Life</a></li>
+            <li><strong>Adri</strong> on <a href="#">Miracles that God has Done in my Life</a></li>
+            <li><strong>Sunday Akodu</strong> on <a href="#">I Knew My Prayer Was Heard</a></li>
+            <li><strong>Luke</strong> on <a href="#">Power of Thanksgiving</a></li>
+          </ul>
+        </div>
+
+        <div class="testimonies-box">
+          <h2>NEW TESTIMONIES</h2>
+          <ul id="testimoniesList">
+            <li><a href="#">Steadfast in Faith, Jesus Upheld Me</a></li>
+            <li><a href="#">Short Christian Testimonies, April 2025</a></li>
+            <li><a href="#">Power of Thanksgiving</a></li>
+            <li><a href="#">I Knew My Prayer Was Heard</a></li>
+            <li><a href="#">Dream: Escape from Fire</a></li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+  </section>
+
+   <!-- Render Comments (in renderCard()) via placeholder div in HTML output: -->
+  <div class="comment-list" data-id="${testimonyId}"></div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="copyright">&copy; <span id="currentYear"></span> Testimony Portal. All rights reserved.</p>
+      <p><span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/testimony.js" type="module"></script>
+  <script src="scripts/sidebar.js" type="module"></script>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/auth.js" type="module"></script>
+</body>
+</html>

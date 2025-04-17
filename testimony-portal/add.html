@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Dynamic Web Fundamentals - Adetokunbo Olutola Osibo</title>
+  <meta name="description" content="Adetokunbo Olutola Osibo's WDD 131 - Project">
+  <meta name="keywords" content="WDD 131, Web Frontend Development, Adetokunbo Olutola Osibo">
+  <meta name="author" content="Adetokunbo Olutola Osibo">
+
+  <meta property="og:title" content="Testimony Portal - Add Testimonies">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="https://tolaji.github.io/wdd131/testimony-portal/add.html">
+  <link rel="icon" href="images/testimony-portal-logo.webp" type="image/x-icon" />
+  
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Testimony<span>Portal</span></div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="navbar" id="navbar">
+      <ul class="navbar-container">
+        <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+        <li class="navbar-item"><a href="testimony.html" class="navbar-link">Testimony</a></li>
+        <li class="navbar-item"><a href="add.html" id="add-menu" class="navbar-link">Add</a></li>
+        <li class="navbar-item"><a href="login.html" class="navbar-link">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="add-testimony">
+      <section class="article-section">
+        <article>
+          <div class="post-content">
+            <h2>Before You Add Your Testimony</h2>  
+            <blockquote><p>He who believes in the Son of God has the testimony in himself. -1 John 5:10a, RSV</p></blockquote>          
+            <p>On <strong>Testimony Portal</strong> You&#8217;ll read stories from people from all walks of life who have had a genuine experience with Jesus Christ to proclaim His glory and wonder. Because We are excited about new testimonies that glorify God&#8217;s grace, love and power, we created this interdenominational Christian portal into the wonderful privilege of 'life' given unto us by God. We believe all testimonies approved for publication on testimonyportal.com to be honest accounts of actual human experiences, though we make no guarantees about the veracity of these accounts. <strong>The views expressed in these testimonies are those of the contributing authors and not ours.</strong> We endeavor to publish testimonies that are compatible with sound scriptural doctrine. If you have a Christian testimony that you would like to share with our readers, please feel free to submit using the guidelines below. All testimonies are subject to review.</p>
+            <h3><strong>Guidelines for Posting Testimonies</strong></h3>
+            <ul>
+              <li>The testimony glorifies God.</li>
+              <li>The testimony is in accordance with sound scriptural doctrine.</li>
+              <li>The testimony is your personal experience and true in your honest belief. </li>
+              <li>We encourage you to use specifics when giving second hand accounts, use specifics to corroborate your story.</li>
+              <li>Be wary of posting sensitive info that should better be kept private.</li>
+            </ul>
+            <p></p>
+            <h3><strong>Testimony Categories</strong></h3>
+            <ul>
+              <li><strong>Salvation</strong> &#8211; Testimonies about how people have had their lives made whole by Jesus Christ.</li>
+              <li><strong>Deliverance</strong> &#8211; Christian testimonies about deliverance from drugs, alcohol, sex addiction, or demon possession.</li>
+              <li><strong>Relationships</strong> &#8211; Christian relationship testimonies including family, marriage, young adults.</li>
+              <li><strong>Healing</strong> &#8211; Christian testimonies about physical and mental healing.</li>
+              <li><strong>Conversion</strong> &#8211; Testimonies about people who have converted to Christianity from another religion or way of life.</li>
+              <li><strong>Martyrdom</strong> &#8211; Testimonies about Christians who have given their lives for Jesus.</li>
+              <li><strong>Missions</strong> &#8211; Christian testimonies experienced by missionaries.</li>
+              <li><strong>Prayer</strong> &#8211; Christian prayer experiences.</li>
+            </ul>
+
+            <p>Testimonies submitted are auto-loaded but always subject to review as they sometimes need more clarification. If you don&#8217;t see your testimony or have technical trouble with the site, <a href="https://testimonyportal.com/contact/">contact us</a>. It goes without saying, submissions containing offensive material or spam will not be accepted. Testimonyportal.com reserves the right to reject or delete any submission if we so decide. You retain the copyright for your testimony. Opinions expressed in testimonies are those of the author and not necessarily those of Testimony Portal.</p> <p><strong>You must be logged-in to submit your testimony.</strong></p>
+            <p>If you agree with the above, submit your testimony</a>!</p>
+          </div>
+        </article>
+    </section>
+      
+    <!-- Add Testimony Form -->
+    <section class="form-section">
+      <h2>Share Your Testimony</h2>
+      <form id="testimonyForm">
+        <p><strong><span style="color: red;">*</span> indicates a required field.</strong></p>
+        <label for="name">Your Name </label>
+        <input type="text" id="name" name="name" placeholder="e.g. John Doe" autocomplete="name" />
+
+        <label for="title" required><span style="color: red;">*</span>Title</label>
+        <input type="text" id="title" name="title" required placeholder="Testimony Title" autocomplete="title"/>
+
+        <label for="content" required><span style="color: red;">*</span>Your Story</label>
+        <textarea id="content" name="content" required placeholder="Write your testimony here..." autocomplete="content"></textarea>
+
+        <button type="submit" class="btn" id="submit">Submit Testimony</button>
+        <p id="successMsg" class="success-msg" style="display: none;">Testimony submitted successfully!</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="copyright">&copy; <span id="currentYear"></span> Testimony Portal. All rights reserved.</p>
+      <p><span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/add.js" defer type="module"></script>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/auth.js" type="module"></script>
+</body>
+</html>

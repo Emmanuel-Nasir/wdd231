@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Dynamic Web Fundamentals - Adetokunbo Olutola Osibo</title>
+  <meta name="description" content="Adetokunbo Olutola Osibo's WDD 131 - Project">
+  <meta name="keywords" content="WDD 131, Web Frontend Development, Adetokunbo Olutola Osibo">
+  <meta name="author" content="Adetokunbo Olutola Osibo">
+
+  <meta property="og:title" content="Testimony Portal">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="https://tolaji.github.io/wdd131/testimony-portal/signup.html">
+  <link rel="icon" href="images/testimony-portal-logo.webp" type="image/x-icon" />
+  
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Testimony<span>Portal</span></div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="navbar" id="navbar">
+      <ul class="navbar-container">
+        <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+        <li class="navbar-item"><a href="testimony.html" class="navbar-link">Testimony</a></li>
+        <li class="navbar-item"><a href="add.html" id="add-menu" class="navbar-link">Add</a></li>
+        <li class="navbar-item"><a href="login.html" class="navbar-link">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+      <!-- Sign Up Form -->
+    <section>
+      <div class="container">
+          <form class="login-box">
+            <h2>Sign Up</h2>
+            <div class="input-box">
+              <label for="email">Email</label>
+              <div class="input-icon">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Enter your email" name="email" autocomplete="email" required/>
+              </div>
+            </div>
+      
+            <div class="input-box">
+              <label for="password">Password</label>
+              <div class="input-icon">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Create a password" name="password" autocomplete="new-password" required/>
+              </div>
+            </div>
+      
+            <button type="submit" class="login-btn" id="signup">SIGN UP</button>
+      
+            <p class="or">Or Sign Up Using</p>
+      
+            <div class="social-icons">
+              <!-- <a href="#">
+                <img id="facebookSignUp" src="images/facebook.png" alt="Facebook" />
+              </a>
+              <a href="#">
+                <img id="twitterSignUp" src="images/x.png" alt="Twitter" />
+              </a> -->
+              <a href="#">
+                <img id="googleSignUp" src="images/google.png" alt="Google" />
+              </a>
+            </div>
+      
+            <p class="signup-text">Already have an account? <a href="login.html">LOGIN</a></p>
+          </form>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="copyright">&copy; <span id="currentYear"></span> Testimony Portal. All rights reserved.</p>
+      <p><span id="lastModified"></span></p>
+    </div>
+  </footer>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="scripts/firebase.js" defer type="module"></script>
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/signup.js" defer type="module"></script>
+  <script src="scripts/navigation.js" defer></script>
+  
+</body>
+</html>

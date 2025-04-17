@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 131 - Dynamic Web Fundamentals - Adetokunbo Olutola Osibo</title>
+  <meta name="description" content="Adetokunbo Olutola Osibo's WDD 131 - Project">
+  <meta name="keywords" content="WDD 131, Web Frontend Development, Adetokunbo Olutola Osibo">
+  <meta name="author" content="Adetokunbo Olutola Osibo">
+
+  <meta property="og:title" content="Testimony Portal - Home">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="https://tolaji.github.io/wdd131/testimony-portal/index.html">
+  <link rel="icon" href="images/testimony-portal-logo.webp" type="image/x-icon" />
+  
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <header >
+    <div class="logo">Testimony<span>Portal</span></div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav class="navbar" id="navbar">
+      <ul class="navbar-container">
+        <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+        <li class="navbar-item"><a href="testimony.html" class="navbar-link">Testimony</a></li>
+        <li class="navbar-item"><a href="add.html" id="add-menu" class="navbar-link">Add</a></li>
+        <li class="navbar-item"><a href="login.html" class="navbar-link">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-img">
+        <img src="images/jesus-8385575_640.webp" alt="by Kar3nt from Pixabay" class="hero-image">
+      </div>
+
+      <div class="hero-overlay">
+        <div class="hero-container">
+          <h2>True Stories That Build Up Your <span>Faith</span></h2>
+          <div class="speech-bubbles">
+            <div class="bubble1">“God answered my prayer in the most unexpected way.”</div>
+            <div class="bubble2">“I was healed when all hope was lost.”</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spotlight Section -->
+    <section class="spotlight-section">
+      <div class="spotlight">
+        <h3>Spotlight</h3>
+        <div class="spotlight-content">
+          <div class="text">
+            <h4>From Darkness to Light: A Journey of Redemption</h4>
+            <p>"For years, I felt like I was walking through life with a hole in my heart—trying to fill it with relationships, work,
+            and distractions. But nothing ever truly satisfied me. I was battling anxiety, shame, and a constant sense of
+            unworthiness.
+            
+            Everything changed the moment I encountered Jesus. A friend invited me to church, and for the first time, I heard about
+            God’s love in a way that pierced my soul. I realized that I wasn't alone, that my past didn't define me, and that I was
+            deeply loved by my Creator.
+            
+            Since surrendering my life to Christ, I’ve experienced a peace that surpasses understanding. My heart is healed, my
+            identity is secure, and I live every day knowing I have purpose. God truly brought me out of the darkness and into His
+            marvelous light.
+            
+            If He did it for me, He can do it for you."</p>
+          </div>
+          <div class="image">
+            <img src="images/tree-spotlight.jpg" alt="Spotlight Image" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="info-cards">
+        <div class="card">
+          <h4>New Testimonies</h4>
+          <p>Read the latest stories shared by our community.</p>
+        </div>
+        <div class="card">
+          <h4>Discussion</h4>
+          <p>Join conversations and encouragement threads.</p>
+        </div>
+        <div class="card">
+          <h4>Get Involved</h4>
+          <p>Find ways to participate or support others.</p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta">
+        <h1>Your Story Can Inspire Others</h1>
+        <p>Psalm 107:2 – “Let the redeemed of the Lord tell their story.”</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn" id="share-testimony">Share Testimony</a>
+            <!-- Modal -->
+            <div id="authModal" class="modal">
+              <div class="modal-content">
+                <div class="modal-image">
+                  <img src="images/testify.jpg" alt="Celebrating by Mehmet İnal" />
+                </div>
+                <h2>Are you already registered?</h2>
+                <p>Choose an option to continue:</p>
+                <div class="modal-buttons">
+                  <button id="loginBtn">Login</button>
+                  <button id="signupBtn">Register</button>
+                  <button id="closeModal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          <a href="testimony.html" class="btn" id="explore-testimony">Explore Testimonies</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="copyright">&copy; <span id="currentYear"></span> Testimony Portal. All rights reserved.</p>
+      <p><span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/auth.js" type="module"></script>
+</body>
+</html>

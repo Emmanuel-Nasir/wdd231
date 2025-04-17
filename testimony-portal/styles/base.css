@@ -1,0 +1,183 @@
+/* ===== CSS Variables (Color & Typography) ===== */
+:root {
+    --primary-color: #2A2E45;
+    --secondary-color: #ADB3CC;
+    --accent1-color: #000000;
+    --accent2-color: #C7EF00;
+    --headline-color-on-white: #20557a;
+    --headline-color-on-color: rgb(67, 245, 76);
+    --paragraph-color-on-color: white;
+    --paragraph-background-color: #145380;
+
+    --heading-font: "Big Shoulders Inline Text", sans-serif;
+    --title-font: "Barlow Condensed", sans-serif;
+    --paragraph-font: "Montserrat", sans-serif;
+}
+
+/* ===== Base Styles ===== */
+body {
+    margin: 0;
+    font-family: var(--paragraph-font);
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background-color: var(--primary-color);
+    color: var(--paragraph-color-on-color);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin: 0.3rem 0;
+}
+
+/* ===== Bottom Section ===== */
+.bottom-section {
+    margin-top: 2rem;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: var(--title-font);
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--headline-color-on-white);
+    margin-top: 1.5rem;
+}
+
+.desc {
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #222;
+}
+
+ul {
+    margin-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.bottom-section {
+    width: 100%;
+}
+
+/* ===== Wireframe Images ===== */
+.wireframe {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.wireframe img {
+    width: 50%;
+    height: auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+#web {
+    width: 100%;
+}
+
+#mobile {
+    margin: 0 auto;
+}
+
+/* ===== Footer Styles ===== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--paragraph-color-on-color);
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .wireframe {
+        flex-direction: column;
+    }
+
+    .wireframe img {
+        width: 100%;
+    }
+}/* ===== Bottom Section ===== */
+.bottom-section {
+    margin-top: 2rem;
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: var(--title-font);
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+.desc {
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #222;
+}
+
+ul {
+    margin-left: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ===== Wireframe Images ===== */
+.wireframe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+}
+
+/* ===== Footer Styles ===== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--paragraph-color-on-color);
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-content {
+    font-size: 0.9rem;
+}
+
